@@ -2,3 +2,35 @@
 
 /* SURPLIX v2 product details and cart controls */
 .product-photo{cursor:pointer}.product-photo:focus-visible{outline:3px solid #f36e35;outline-offset:-3px}.product-title{background:none;border:0;padding:0;text-align:left;font:inherit;font-weight:inherit;color:inherit}.product-title:hover{text-decoration:underline}.remove-item{border:0;background:none;text-decoration:underline;color:#a84421;font-size:12px;padding:7px 0}.detail-overlay{z-index:20;display:flex;align-items:center;justify-content:center;padding:22px}.detail-modal{position:relative;display:grid;grid-template-columns:1fr 1fr;width:min(880px,100%);max-height:90vh;overflow-y:auto;background:#fff;box-shadow:0 25px 90px #0005}.detail-close{position:absolute;right:15px;top:15px;z-index:2;border:0;background:#fff;border-radius:50%;padding:8px}.detail-image{position:relative;background:#eee;min-height:360px}.detail-image img{width:100%;height:100%;object-fit:cover;position:absolute}.detail-image .sale{position:absolute;top:18px;left:18px}.detail-info{padding:45px 36px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}.detail-info h2{font-family:Outfit,sans-serif;font-size:clamp(28px,4vw,44px);line-height:1.05;margin:0}.detail-info p{line-height:1.65;font-size:13px;color:#666}.detail-info .prices{display:flex;gap:12px;align-items:center}.detail-size{width:100%;display:flex;flex-direction:column;gap:8px;font-weight:700;font-size:13px}.detail-size select{padding:12px;border:1px solid #ccc;background:white}.detail-info .add{width:100%;justify-content:center}.detail-kind{margin:0}.detail-info .disclaimer{font-size:11px}@media(max-width:650px){.detail-modal{grid-template-columns:1fr;max-height:92vh}.detail-image{min-height:240px}.detail-info{padding:25px 22px}.detail-image img{position:relative;display:block;height:260px}}
+
+
+/* SURPLIX checkout preview: append to the END of src/style.css */
+.surplix-checkout-overlay{z-index:1000;overflow-y:auto;align-items:flex-start;padding:28px 16px}
+.surplix-checkout{width:min(1050px,100%);max-height:calc(100vh - 56px);overflow-y:auto;margin:auto;background:#fff;color:#202020;border-radius:18px;box-shadow:0 22px 70px #0004;padding:30px}
+.surplix-checkout-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;border-bottom:1px solid #e8e8e8;padding-bottom:22px;margin-bottom:24px}
+.surplix-checkout-heading h2{font-size:clamp(26px,3vw,38px);margin:6px 0}.surplix-checkout-heading p{color:#666;margin:0}
+.surplix-close{border:1px solid #ddd;background:#fff;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;cursor:pointer;flex-shrink:0}
+.surplix-checkout-columns{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(290px,.85fr);gap:38px}
+.surplix-checkout-form h3,.surplix-order-summary h3{font-size:19px;margin:24px 0 15px}.surplix-checkout-form h3:first-of-type{margin-top:24px}
+.surplix-checkout-notice{display:flex;align-items:center;gap:10px;background:#fff5e9;border:1px solid #f1d7b5;color:#724319;padding:13px 14px;border-radius:9px;font-size:14px}
+.surplix-field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.surplix-field-grid label{display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:600}
+.surplix-field-grid .surplix-full{grid-column:1/-1}
+.surplix-field-grid input,.surplix-field-grid select{box-sizing:border-box;width:100%;min-width:0;padding:12px;border:1px solid #d8d8d8;border-radius:8px;background:#fff;color:#222;font:inherit;font-size:15px}
+.surplix-field-grid input:focus,.surplix-field-grid select:focus{outline:2px solid #eaa35e;outline-offset:1px}
+.surplix-field-grid input[readonly]{background:#f6f6f6}
+.surplix-payment-pending{display:flex;gap:12px;padding:17px;border:1px solid #ddd;border-radius:10px;background:#fafafa}.surplix-payment-pending p{font-size:13px;color:#666;line-height:1.5;margin:6px 0 0}
+.surplix-pay-disabled{display:block;width:100%;padding:15px;margin-top:20px;border:0;border-radius:9px;background:#ddd;color:#555;font-weight:800;cursor:not-allowed}
+.surplix-checkout-small{font-size:12px;color:#777;line-height:1.5;margin-top:12px}
+.surplix-back{display:inline-flex;align-items:center;gap:8px;border:0;background:none;padding:12px 0;color:#333;text-decoration:underline;cursor:pointer;font-weight:600}
+.surplix-order-summary{align-self:start;background:#f7f7f7;border:1px solid #ededed;border-radius:12px;padding:20px}
+.surplix-order-summary h3{margin:0 0 18px}.surplix-summary-item{display:flex;align-items:center;gap:11px;border-bottom:1px solid #e4e4e4;padding:12px 0}.surplix-summary-item img{width:58px;height:65px;object-fit:cover;border-radius:6px;background:#eee}.surplix-summary-item>div{flex:1;min-width:0}.surplix-summary-item strong{display:block;font-size:13px}.surplix-summary-item small{display:block;color:#777;font-size:11px;margin-top:4px}.surplix-summary-item>b{white-space:nowrap;font-size:13px}
+.surplix-summary-row,.surplix-summary-total{display:flex;justify-content:space-between;gap:12px;padding:11px 0;font-size:13px}.surplix-summary-row span:last-child{text-align:right}.surplix-summary-total{border-top:1px solid #ccc;margin-top:8px;font-size:16px}
+@media(max-width:760px){.surplix-checkout-overlay{padding:0}.surplix-checkout{max-height:100vh;border-radius:0;padding:20px 16px}.surplix-checkout-columns{grid-template-columns:1fr;gap:20px}.surplix-order-summary{order:-1}.surplix-field-grid{grid-template-columns:1fr}.surplix-field-grid .surplix-full{grid-column:auto}}
+
+/* SURPLIX Stripe sandbox button */
+.surplix-pay-test{display:block;width:100%;padding:15px;margin-top:20px;border:0;border-radius:9px;background:#f36e35;color:#181818;font-weight:800;cursor:pointer}
+.surplix-pay-test:hover:not(:disabled){background:#e35f28}
+.surplix-pay-test:disabled{background:#ddd;color:#555;cursor:not-allowed}
+.surplix-checkout-warning{padding:12px;border:1px solid #e8d1a4;border-radius:8px;background:#fff8e8;color:#6d4b12;font-size:13px;line-height:1.5}
+.surplix-checkout-error{padding:12px;border:1px solid #e6a8a8;border-radius:8px;background:#fff0f0;color:#8a2525;font-size:13px}
